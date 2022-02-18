@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import Form from "./components/Form"
+import Header from "./components/Header"
+import Result from "./components/Result"
+
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+
+import CalculatorContextProvider from "./context/CalculatorContext"
+
+const App = () => {
+    return (
+        <CalculatorContextProvider>
+            <Router>
+                <div className="container">
+                    <Header />
+                    <Routes>
+                        <Route path="/" element={<Form />} />
+                        <Route path="/result" element={<Result />} />
+                    </Routes>
+                </div>
+            </Router>
+        </CalculatorContextProvider>
+    )
 }
-
-export default App;
+export default App

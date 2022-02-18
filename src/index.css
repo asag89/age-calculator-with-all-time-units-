@@ -1,13 +1,123 @@
-body {
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+*{
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body{
+  background-color: rgb(33, 31, 31);
+  font-family: 'Poppins', sans-serif;
+}
+
+button{
+  cursor: pointer;
+}
+
+.header{
+  width: 100%;
+  height: 80px;
+  background-color: rgb(77, 71, 84);
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.header h1{
+  color: #fff;
+  text-align: center;
+  line-height: 80px;
+}
+
+.form-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: 100px;
+  padding: 100px;
+}
+
+.form-h2{
+  color: #fff;
+  padding: 40px 0;
+}
+
+.form-btn{
+  width: 100px;
+  height: 35px;
+  margin-left: 25px;
+  border-radius: 15px;
+  background-color: #111;
+  color: #00ffff;
+}
+
+select{
+  width: 180px;
+  height: 35px;
+  padding: 0 10px;
+  background-color: #222;
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.link{
+  padding: 8px 22px;
+  border-radius: 15px;
+  background-color: #111;
+  color: #00ffff;
+  text-align: center;
+}
+
+.result-container{
+  margin-top: 60px;
+  padding: 40px;
+  font-size: 1.3rem;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+table{
+  border-collapse: collapse;
+}
+
+.result-container td{
+  background-color: rgba(17, 16, 16, 0.6);
+  border-radius: 5px;
+  padding: 10px 20px;
+  border: 0.5px solid #fff;
+}
+
+.result-container td:first-child{
+  color: #00ffff;
+  border-color: #00ffff;
+  background-color: rgba(23, 48, 48, 0.4);
+}
+
+.result-container td:last-child{
+  color: #f801db;
+  border-color: rgb(248, 1, 219);
+  background-color: rgba(128, 28, 116, 0.2);
+}
+
+.btn-result{
+  width: 100px;
+  height: 35px;
+  margin-top: 30px;
+
+  border-radius: 15px;
+  background-color: #111;
+  color: #00ffff;
 }
